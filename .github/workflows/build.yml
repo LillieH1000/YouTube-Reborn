@@ -25,7 +25,7 @@ jobs:
         with:
           repository: chrisharper22/sdks
           ref: main
-          sparse-checkout: iPhoneOS15.5.sdk
+          sparse-checkout: iPhoneOS16.2.sdk
           path: theos/sdks
 
       - name: Build Package 
