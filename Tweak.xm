@@ -2144,8 +2144,15 @@ BOOL selectedTabIndex = NO;
 
 %ctor {
     @autoreleasepool {
-        [[NSUserDefaults standardUserDefaults] registerDefaults:@{@"kEnablePictureInPictureVTwo":@YES}];
-        if ([[[NSUserDefaults standardUserDefaults] registerDefaults:@{@"kEnableNoVideoAds":@YES}] boolForKey:@"kEnableNoVideoAds"] == YES && [[NSUserDefaults standardUserDefaults] boolForKey:@"kRebornIHaveYouTubePremium"] == NO) {
+        if ([[NSUserDefaults standardUserDefaults] objectForKey:@"kEnableNoVideoAds"] == nil) {
+            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"kEnableNoVideoAds"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+        }
+        if ([[NSUserDefaults standardUserDefaults] objectForKey:@"kEnablePictureInPictureVTwo"] == nil) {
+            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"kEnablePictureInPictureVTwo"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+        }
+        if ([[NSUserDefaults standardUserDefaults] boolForKey:@"kEnableNoVideoAds"] == YES && [[NSUserDefaults standardUserDefaults] boolForKey:@"kRebornIHaveYouTubePremium"] == NO) {
             %init(gNoVideoAds);
         }
         if ([[NSUserDefaults standardUserDefaults] boolForKey:@"kEnableBackgroundPlayback"] == YES && [[NSUserDefaults standardUserDefaults] boolForKey:@"kRebornIHaveYouTubePremium"] == NO) {
