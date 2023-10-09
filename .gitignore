@@ -1,3 +1,8 @@
-.theos
+# macOS
 .DS_Store
+
+# Theos
+.theos
+
+# Builds
 packages
