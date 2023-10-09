@@ -236,7 +236,7 @@ YTMainAppVideoPlayerOverlayViewController *stateOut;
 
     NSString *videoIdentifier = [playingVideoID currentVideoID];
 
-    UIAlertController *alertMenu = [UIAlertController alertControllerWithTitle:@"Notice" message:@"Due to an odd server side change, video downloading is only available up to 720p currently, looking into it" preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertController *alertMenu = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
 
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"kRebornIHaveYouTubePremium"] == NO) {
         [alertMenu addAction:[UIAlertAction actionWithTitle:@"Download Audio" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
