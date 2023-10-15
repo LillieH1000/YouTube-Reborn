@@ -176,6 +176,7 @@
                 [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"kIntroSegmentedInt"];
                 [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"kOutroSegmentedInt"];
                 [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"kPreviewSegmentedInt"];
+                [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"kFillerSegmentedInt"];
                 [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"kMusicOffTopicSegmentedInt"];
                 [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"kStartupPageIntVTwo"];
                 [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"kHideRebornOPButtonVTwo"];
